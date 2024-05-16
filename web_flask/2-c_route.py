@@ -17,20 +17,20 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
-    """ Function called through /."""
+    """Function called through the / route."""
     return 'Hello HBNB!'
 
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    """ Function called through /hbnb."""
+    """Function called through the /hbnb route."""
     return 'HBNB'
 
 
 @app.route('/c/<text>', strict_slashes=False)
 def c_route(text):
-    """ Function called through /c/<text>."""
-    return 'C %s % text.replace('_', ' ')'
+    """Function called through the /c/<text> route."""
+    return 'C %s' % text.replace('_', ' ')
 
 
 if __name__ == '__main__':
