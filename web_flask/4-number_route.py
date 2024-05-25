@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A script to start a web app on port 5000 and return Hello HBNB!"""
+"""This is a script to start a web app on port 5000 and return Hello HBNB!"""
 from flask import Flask
 from markupsafe import escape
 
@@ -35,10 +35,12 @@ def python():
     """ Function that returns python is cool"""
     return "Python is cool"
 
+
 @app.route('/number/<int:n>', strict_slashes=False)
 def prnt_number(n):
     """ Function that returns n """
     return f"{n} is a number"
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
